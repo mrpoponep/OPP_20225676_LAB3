@@ -6,7 +6,7 @@ public class Cart {
         if (qtyOrdered < 20) {
             items[qtyOrdered] = disc;
             qtyOrdered++;
-            System.out.println("The disc \"" + disc.getTitle() + "\" has been added.");
+            System.out.println("The disc \"" + disc.getTitle() + "\" - \"" + disc.getId()  + "\" has been added.");
         } else {
             System.out.println("The cart is almost full. Cannot add more DVDs.");
         }
