@@ -54,6 +54,10 @@ public class DigitalVideoDisc {
             + cost + " $";
     }
 
+    public boolean isMatch(String title) {
+        return this.title != null && this.title.equalsIgnoreCase(title);
+    }
+
     public void setTitle(String title) {
         this.title = title;
     }

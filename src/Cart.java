@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Cart {
     private DigitalVideoDisc[] items = new DigitalVideoDisc[20]; 
     private int qtyOrdered = 0; 
@@ -53,6 +55,40 @@ public class Cart {
             }
         }
         System.out.println("The disc \"" + disc.getTitle() + "\" was not found in the cart.");
+    }
+
+    public void searchDVD(int id) {
+        ArrayList<DigitalVideoDisc> matchingDVDs = new ArrayList<>();
+        for (int i = 0; i < qtyOrdered; i++) {
+            if (items[i].getId() == id) {
+                matchingDVDs.add(items[i]);
+            }
+        }
+        if (matchingDVDs.isEmpty()) {
+            System.out.println("No DVDs found with title: \"" + id + "\"");
+        } else {
+            System.out.println("Matching DVDs:");
+            for (DigitalVideoDisc dvd : matchingDVDs) {
+                System.out.println(dvd);
+            }
+        }
+    }
+
+    public void searchDVD(String title) {
+        ArrayList<DigitalVideoDisc> matchingDVDs = new ArrayList<>();
+        for (int i = 0; i < qtyOrdered; i++) {
+            if (items[i].isMatch(title)) {
+                matchingDVDs.add(items[i]);
+            }
+        }
+        if (matchingDVDs.isEmpty()) {
+            System.out.println("No DVDs found with title: \"" + title + "\"");
+        } else {
+            System.out.println("Matching DVDs:");
+            for (DigitalVideoDisc dvd : matchingDVDs) {
+                System.out.println(dvd);
+            }
+        }
     }
 
     public void printCart() {
