@@ -1,4 +1,6 @@
-// Wrapper class to hold a DigitalVideoDisc
+package hust.soict.dsai.test.disc;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+
 class DigitalVideoDiscWrapper {
     DigitalVideoDisc dvd;
 

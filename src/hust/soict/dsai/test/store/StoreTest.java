@@ -1,3 +1,7 @@
+package hust.soict.dsai.test.store;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.store.Store;
+
 public class StoreTest {
     public static void main(String[] args) {
         DigitalVideoDisc dvd1 = new DigitalVideoDisc("Jungle", "Adventure", "John Doe", 120, 20.99);
