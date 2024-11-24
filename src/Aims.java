@@ -15,5 +15,8 @@ public class Aims {
         cart.removeDigitalVideoDisc(dvd1);
         System.out.println("Total cost after removing dvd1: " + cart.totalCost());
         cart.printCart();
+
+        cart.searchDVD("Movie 2");
+        cart.searchDVD(3);
     }
 }
