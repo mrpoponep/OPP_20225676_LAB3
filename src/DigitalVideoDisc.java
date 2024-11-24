@@ -45,6 +45,15 @@ public class DigitalVideoDisc {
         this.id = nbDigitalVideoDiscs;
     }
 
+    public String toString() {
+        return "DVD - " 
+            + (title != null ? title : "Unknown Title") + " - " 
+            + (category != null ? category : "Unknown Category") + " - " 
+            + (director != null ? director : "Unknown Director") + " - " 
+            + (length > 0 ? length + " mins" : "Unknown Length") + ": " 
+            + cost + " $";
+    }
+
     public void setTitle(String title) {
         this.title = title;
     }

@@ -55,6 +55,23 @@ public class Cart {
         System.out.println("The disc \"" + disc.getTitle() + "\" was not found in the cart.");
     }
 
+    public void printCart() {
+        System.out.println("***********************CART***********************");
+        System.out.println("Ordered Items:");
+
+        double totalCost = 0.0;
+        int index = 1;
+
+        for (int i = 0; i < qtyOrdered; i++) {
+            System.out.println(index + ". " + items[i].toString());
+            totalCost += items[i].getCost();
+            index++;
+        }
+
+        System.out.println("\nTotal cost: " + totalCost + " $");
+        System.out.println("***************************************************");
+    }
+
     public double totalCost() {
         double total = 0;
         for (int i = 0; i < qtyOrdered; i++) {
