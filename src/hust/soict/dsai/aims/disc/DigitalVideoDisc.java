@@ -1,18 +1,29 @@
+package hust.soict.dsai.aims.disc;
+
 public class DigitalVideoDisc {
     private String title;
     private String category;
     private double cost;
     private String director;
     private int length;
+    private int id;
+
+    private static int nbDigitalVideoDiscs = 0;
 
     public DigitalVideoDisc(String title) {
         this.title = title;
+
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
 
     public DigitalVideoDisc(String category, String title, double cost) {
         this.category = category;
         this.title = title;
         this.cost = cost;
+
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
 
     public DigitalVideoDisc(String director, String category, String title, double cost) {
@@ -20,6 +31,9 @@ public class DigitalVideoDisc {
         this.category = category;
         this.title = title;
         this.cost = cost;
+
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
 
     public DigitalVideoDisc(String title, String category, String director, int length, double cost) {
@@ -28,6 +42,26 @@ public class DigitalVideoDisc {
         this.director = director;
         this.length = length;
         this.cost = cost;
+
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
+    }
+
+    public String toString() {
+        return "DVD - " 
+            + (title != null ? title : "Unknown Title") + " - " 
+            + (category != null ? category : "Unknown Category") + " - " 
+            + (director != null ? director : "Unknown Director") + " - " 
+            + (length > 0 ? length + " mins" : "Unknown Length") + ": " 
+            + cost + " $";
+    }
+
+    public boolean isMatch(String title) {
+        return this.title != null && this.title.equalsIgnoreCase(title);
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getTitle() {
@@ -48,5 +82,9 @@ public class DigitalVideoDisc {
 
     public int getLength() {
         return length;
+    }
+
+    public int getId() {
+        return id;
     }
 }
