@@ -1,3 +1,4 @@
+package OtherProject.hust.soict.globalict.garbage;
 import java.util.Random;
 public class StringConcatenation {
     public static void main(String[] args) {

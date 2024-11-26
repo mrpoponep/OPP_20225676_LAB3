@@ -1,5 +1,5 @@
-package hust.soict.dsai.test.disc;
-import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+package src.hust.soict.dsai.test.disc;
+import src.hust.soict.dsai.aims.disc.DigitalVideoDisc;
 
 class DigitalVideoDiscWrapper {
     DigitalVideoDisc dvd;
