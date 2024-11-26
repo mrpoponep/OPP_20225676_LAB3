@@ -1,3 +1,4 @@
+package OtherProject.hust.soict.dsai.lab01;
 import java.util.Scanner;
 public class TriangleStars {
     public static void main(String[] args) {
