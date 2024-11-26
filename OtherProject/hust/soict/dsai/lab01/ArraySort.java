@@ -1,3 +1,4 @@
+package OtherProject.hust.soict.dsai.lab01;
 import java.util.Scanner;
 
 public class ArraySort {
